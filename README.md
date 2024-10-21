@@ -38,6 +38,7 @@ sudo bash ~/phone_settings/screen-res.sh
 ```
 
 On first run:
+0. Select 
 1. Enter your device name
 2. Enter your screen size (in inches)
 3. Default resolution and DPI will be automatically detected
