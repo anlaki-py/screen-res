@@ -4,9 +4,8 @@ A simple script to manage screen resolution and density settings on Android devi
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/anlaki-py/screen-res/main/screenshots/Capture.PNG" alt="Capture 1" width="320"/>
-  <img src="https://raw.githubusercontent.com/anlaki-py/screen-res/main/screenshots/Capture2.PNG" alt="Capture 2" width="320"/>
-  <img src="https://raw.githubusercontent.com/anlaki-py/screen-res/main/screenshots/Capture3.PNG" alt="Capture 3" width="320"/>
+  <img src="https://raw.githubusercontent.com/anlaki-py/screen-res/main/screenshots/Capture.PNG" alt="Capture 1" width="360"/>
+  <img src="https://raw.githubusercontent.com/anlaki-py/screen-res/main/screenshots/Capture2.PNG" alt="Capture 2" width="360"/>
 </p>
 
 
