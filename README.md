@@ -38,9 +38,9 @@ sudo bash ~/phone_settings/screen-res.sh
 ```
 
 On first run:
-0. Select 
+0. Select `Reconfigure Device Settings`
 1. Enter your device name
-2. Enter your screen size (in inches)
+2. Enter your screen size in inches (e.g. `6.1`)
 3. Default resolution and DPI will be automatically detected
 
 ## Features
