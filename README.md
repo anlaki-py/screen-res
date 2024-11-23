@@ -67,4 +67,4 @@ If the script doesn't work:
 
 ## License
 
-© anlaki - 2024
+This project is open source and available under the [MIT License](LICENSE).
