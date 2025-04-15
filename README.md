@@ -1,70 +1,46 @@
-# Universal Android Screen Resolution Manager
+# ASRM (Android Screen Resolution Manager)
 
-A simple script to manage screen resolution and density settings on Android devices through Termux.
+Hey! So, this is ASRM - a little tool I cooked up to handle screen resolution and density stuff on Android, designed to run right in **Termux**.
 
+It took a *ton* of time generating, testing, and debugging this thing, but I think it's finally in a pretty stable state now!
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/anlaki-py/screen-res/main/screenshots/Capture.PNG" alt="Capture 1" width="360"/>
-  <img src="https://raw.githubusercontent.com/anlaki-py/screen-res/main/screenshots/Capture2.PNG" alt="Capture 2" width="360"/>
-</p>
+## What It Does (The Short Version)
 
+* **Simple Menu:** Uses `dialog` so you don't have to remember weird commands.
+* **Set Custom Res:** Punch in the width/height you want.
+* **Presets:** Save settings you use often so you can switch back and forth easily.
+* **Reset Button:** A quick way to get back to your phone's default screen settings.
+* **Backup/Restore:** Save your current setup before experimenting.
 
-## Requirements
+## The "Oh Crap" Safety Net (15s Countdown!)
 
-1. Install Termux from F-Droid (recommended) or Play Store
-2. Required packages:
+We've all been there – change the resolution and suddenly the screen is black or unusable. That's why I added this:
 
-Install all needed packages with one command:
+* After you change settings, you've got **15 seconds**.
+* If the screen looks good, **hit Enter** to keep it.
+* If it's messed up or you do nothing, it **automatically switches back** to how it was before.
+
+Trust me, this feature alone saved me a bunch of headaches during testing!
+
+## How to Use in Termux (*ROOT REQUIRED*)
+
+1.  **Get the needed bits:**
 ```bash
-pkg update && pkg install -y dialog tsu
+pkg update && pkg install dialog tsu
 ```
-
-Or install them individually:
-- `pkg install dialog` - for the user interface
-- `pkg install tsu` - for root access
-
-## Installation
-
-1. Create a directory for the script:
+(Android has the main `wm` command built-in)
+1.  **Allow it to run:**
 ```bash
-mkdir -p ~/phone_settings
+chmod +x asrm.sh
 ```
-
-2. Download the script and make it executable:
+1.  **Fire it up:**
 ```bash
-cd ~/phone_settings
-curl -O https://raw.githubusercontent.com/anlaki-py/screen-res/main/screen-res.sh
-chmod +x screen-res.sh
+sudo bash asrm.sh
 ```
+1.  Just follow the menus!
 
-## Usage
+## Quick Heads-Up (Disclaimer)
 
-Run the script with:
-```bash
-sudo bash ~/phone_settings/screen-res.sh
-```
+Look, this script fiddles with system display settings. While I've worked hard to make it stable and added the safety countdown, things can still go sideways. Use it at your own risk, okay? I'm not responsible if your screen does something funky. The full "official" disclaimer is in the script file too.
 
-On first run:
-0. Select `Reconfigure Device Settings`
-1. Enter your device name
-2. Enter your screen size in inches (e.g. `6.1`)
-3. Default resolution and DPI will be automatically detected
-
-## Features
-
-- Change screen resolution
-- Save and load resolution presets
-- Backup and restore settings
-- Automatic DPI calculation
-- Revert to default settings
-
-## Troubleshooting
-
-If the script doesn't work:
-1. Make sure you installed all required packages
-2. Check if you have root access (`sudo su`)
-3. Verify the script has execute permissions
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+Hope you find it useful!
